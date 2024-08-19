@@ -43,6 +43,7 @@ To try out this proof of concept:
 - The hot reloading mechanism only works for the specific `f1()` function.
 - Ensure that the new version of the function has the same signature and doesn't introduce new dependencies.
 - This approach bypasses normal safety checks and can lead to crashes if not used carefully.
+- The `opcode.sh` file contains the shell commands used for disassembling the function. This script extracts the machine code (opcodes) from the compiled object file using `objdump` and processes the output with `sed` and `tr` commands. It provides a reliable method for obtaining the raw instruction bytes, which are crucial for the hot reloading process. You can examine this file to understand the exact disassembly process or modify it if you need to adjust the extraction method for different architectures or compilation settings.
 
 ## Requirements
 
