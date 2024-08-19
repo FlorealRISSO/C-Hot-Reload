@@ -1,1 +1,5 @@
-int f1() { return 2; }
+int
+f1()
+{
+	return 8;
+}
